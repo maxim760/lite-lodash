@@ -112,7 +112,7 @@ export const isArrayLikeObject = (value: any) => {
 
 export const isBoolean = (value: any) => typeof value === "boolean";
 
-export const isBuffer = (value: any) => value instanceof Buffer;
+export const isBuffer = (value: any) => value instanceof ArrayBuffer ||value instanceof AudioBuffer || value instanceof AudioBufferSourceNode ||value instanceof SourceBuffer ||value instanceof SourceBufferList||value instanceof SharedArrayBuffer ;
 
 export const isDate = (value: any) => value instanceof Date;
 
