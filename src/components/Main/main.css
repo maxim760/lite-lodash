@@ -1,0 +1,116 @@
+.main {
+  margin-left: 20%;
+  padding: 0 0 20px;
+  width: 80%;
+}
+
+.main__category-name {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #5f5f5f;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0 40px 0 20px;
+}
+
+.main__function > div:not(.main__example) {
+  padding: 0 40px 0 20px;
+}
+.main__example {
+  position: relative;
+}
+
+.main__example > .main__function-title
+{
+  padding: 0 40px 0 20px;
+}
+.main__example code {
+  padding: 10px 40px 10px 30px;
+
+}
+
+.main__function-name {
+  margin-top: 15px;
+  padding-left: 10px;
+  height: 80px;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #5f5f5f;
+  background: #eeeeee;
+}
+
+.main__function-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5f5f5f;
+  margin-bottom: 25px;
+}
+
+.main__function-title {
+  color: #5f5f5f;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.main__info {
+  color: #3492ff;
+  font-weight: 600;
+}
+
+.main__arg-content,
+.main__return-content {
+  position: relative;
+  left: 15px;
+  font-size: 1rem;
+  color: #5f5f5f;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+.code {
+  position: relative;
+}
+
+.copy {
+  cursor: pointer;
+position: absolute;
+color: wheat;
+border-radius: 12px;
+  right: 8px;
+  top: 5px;
+  padding: 5px 10px;
+  border: 1px dashed wheat;
+  transition: all 0.22s ease-in;
+}
+
+.copy:hover {
+  font-weight: 600;
+  background-color: #E7DDFF;
+  border-color:  #E7DDFF;
+  color: #5f5f5f
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  align-items: center;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  color: #5f5f5f;
+  font-size: 1.2rem;
+  background-color: rgba(3, 177, 113, 0.9);
+  z-index: 10;
+}
+
+.code__function {
+  white-space: pre-wrap
+}

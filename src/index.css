@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+}
+li {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.panel__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.panel__list::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.panel__list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 5px;
+  height: 6rem !important;
+}
+
+.app {
+  display: flex;
+}
