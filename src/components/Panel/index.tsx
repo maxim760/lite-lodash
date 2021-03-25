@@ -28,7 +28,7 @@ export const Panel: React.FC<PanelProps> = ({}): React.ReactElement => {
     const query = e.target.value;
     const regex = new RegExp(query, "gi");
     setValue(query);
-    setCategories((prev) => prev.reduce(filterByQuery(regex), []));
+    setCategories(defaultCats.reduce(filterByQuery(regex), []));
   };
 
   return (

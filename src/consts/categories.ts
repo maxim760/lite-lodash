@@ -1368,3 +1368,9 @@ export const categoryItems: ICategoryItem[] = categories.map((c) => ({
   title: c.title,
   items: c.items.map((it) => it.name),
 }));
+
+
+const res = categories.map(item => {
+  return item.items.map(func => func.function.toString())
+})
+console.log(res)
