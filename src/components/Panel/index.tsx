@@ -30,7 +30,7 @@ export const Panel: React.FC<PanelProps> = ({}): React.ReactElement => {
     setValue(query);
     setCategories(defaultCats.reduce(filterByQuery(regex), []));
   };
-
+  
   return (
     <div className="panel">
       <div className="panel__search">

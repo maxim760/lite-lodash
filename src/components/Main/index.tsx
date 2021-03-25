@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.css";
 import { useCopyToClipboard } from "react-use";
-import { categories } from "../../consts/categories";
+import { categories, res } from "../../consts/categories";
 import Highlight from "react-highlight.js"
 
 export const Main = ({}) => {
