@@ -1,48 +1,43 @@
 import React from "react";
 import "./main.css";
-import { useCopyToClipboard } from "react-use";
 import { categories, res } from "../../consts/categories";
 import Highlight from "react-highlight.js"
 
 export const Main = ({}) => {
-  const [state, copyToClipboard] = useCopyToClipboard();
-  const [isShowAlert, setIsShowAlert] = React.useState(false);
+  const [isShowAlertCopy, setIsShowAlertCopy] = React.useState(false);
 
   const onCopyCode = (text: string) => () => {
-    copyToClipboard(text);
+    console.log("do")
+    navigator.clipboard.writeText(text)
+    console.log("posle")
     setTimeout(() => {
-      setIsShowAlert(false);
+      setIsShowAlertCopy(false);
     }, 3000);
-    setIsShowAlert(true);
+    setIsShowAlertCopy(true);
   };
 
   return (
     <>
-      {isShowAlert && <div className="alert">✔ Copied to clipboard!</div>}
+      {isShowAlertCopy && <div className="alert">✔ Copied to clipboard!</div>}
       <div className="main">
         {categories.map(({ title, items }, i) => (
           <div className="main__category" key={i}>
             <h1 className="main__category-name">“{title}” Methods </h1>
-            {items.map((item, idx) => {
-              const functStr = item.function.toString();
+            {items.map(({ name, function: fn }, idx) => {
+              const fnText = `const ${name} = ${fn}`
               return (
-                <div className="main__function" id={item.name} key={idx}>
-                  <div className="main__function-name">{item.name}</div>
+                <div className="main__function" id={name} key={idx}>
+                  <div className="main__function-name">{name}</div>
                   <div className="main__example">
-                    <p
-                      role="button"
+                    <button
                       className="copy"
-                      onClick={onCopyCode(`const ${item.name} = ${functStr}`)}
+                      onClick={onCopyCode(fnText)}
                     >
                       Copy
-                    </p>
-
+                    </button>
                     <Highlight language="javascript">
-                      <code className=" code__function">
-                        <p>
-                          const {item.name} {"= "}
-                          {functStr}
-                        </p>
+                      <code className="code__function">
+                        <p>{fnText}</p>
                       </code>
                     </Highlight>
                   </div>

@@ -78,21 +78,24 @@
 
 .copy {
   cursor: pointer;
-position: absolute;
-color: wheat;
-border-radius: 12px;
+  position: absolute;
+  color: wheat;
+  border-radius: 12px;
   right: 8px;
   top: 5px;
-  padding: 5px 10px;
-  border: 1px dashed wheat;
+  z-index: 9999;
+  background-color: transparent;
+  padding: 5px 0;
+  text-align: center;
+  border: 2px dotted wheat;
   transition: all 0.22s ease-in;
+  width: 60px;
+  outline: none;
 }
 
 .copy:hover {
-  font-weight: 600;
-  background-color: #E7DDFF;
-  border-color:  #E7DDFF;
-  color: #5f5f5f
+  border: 2px dotted rgb(255, 94, 0);
+  color: rgb(255, 94, 0);
 }
 
 .alert {

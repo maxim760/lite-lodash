@@ -1,12 +1,10 @@
-export const flattenDeep = (array: any[]): any => {
-  const isFlatArray = (array: any[]): any =>
-    array.every((item: any) => !Array.isArray(item));
-  let fake = JSON.parse(JSON.stringify(array));
-  while (!isFlatArray(fake)) {
-    fake = fake.flat();
-  }
-
-  return fake;
+export const flattenDeep = (array: any[]): any[] => {
+  return array.reduce((acc, item) => {
+    if (!Array.isArray(item)) {
+      return [...acc, item];
+    }
+    return [...acc, ...flattenDeep(item)];
+  }, []);
 };
 
 // console.log(flattenDeep([1, 2, 3, 4, 5]));
