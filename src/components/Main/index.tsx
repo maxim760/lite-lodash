@@ -7,9 +7,7 @@ export const Main = ({}) => {
   const [isShowAlertCopy, setIsShowAlertCopy] = React.useState(false);
 
   const onCopyCode = (text: string) => () => {
-    console.log("do")
     navigator.clipboard.writeText(text)
-    console.log("posle")
     setTimeout(() => {
       setIsShowAlertCopy(false);
     }, 3000);
